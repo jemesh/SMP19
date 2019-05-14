@@ -1,0 +1,3 @@
+Output is :-
+false true
+because the list l1 and l2 are different objects while the str1 and str2 are the same objects.

@@ -1,0 +1,9 @@
+par1:-
+in the first part we get the output as ['1','S','T','E'] and ['1','S','T','E']
+because the list1=list2 part in the code creates the same object for both of them so change in list2 also create a 
+change in list1 but in the next part we wrote list1=list1+[] will create new object for list1 so after that change 
+in list2  doesnt create a change in list1
+part2:-
+the second output is ['1','S','T','E'] and ['1','2','T','E']
+here for the first output the reason is same as mentioned in the above case for the 2 nd output here the list1+=[]
+will not create a new object for list1 hence change in the value of list2 changes the value of list1
