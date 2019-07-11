@@ -1,0 +1,2 @@
+//solution pending
+I found some stuff online about lambdas, I will refrain from using those because they're  not tuaght yet.

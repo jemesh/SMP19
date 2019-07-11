@@ -1,0 +1,8 @@
+the OP is
+list1 = ['I', 'S', 'T', 'E']
+list1 = ['1', 'S', 'T', 'E']
+
+line #2, list2= list1 makes both the lists point to the same data location, so changes in 2 affect 1
+but line #5 makes the list1 point to a different location, by making a new list1, that has the data from list 1, and a new empty list. If we placed list2 = list1 after this line, we could say they were linked again, but they aren't linked after line #5.
+
+If we changed line #5 to list1+=[], we'd still be using the original location list1 was linked to, which is the same as list 2. That way, any change to list 2 would also affect list1.
