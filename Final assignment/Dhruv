@@ -1,0 +1,107 @@
+1.
+pip install virtualenv
+virtualenv d
+virtualenv -p user/bin/python3 virtualenv dh
+source virtualenv d/bin/active
+
+I have doubt in this question
+
+2.
+class a:
+	d='    Pizza Marinara have imigrants tomatoes, garlic, oregano, and extra virgin olive oil.'
+	l=150
+class b:
+	d='    Generally, the toppings for Chicago pizza are ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce. '
+	l=250
+class c:
+	d='    New York-style pizza usually features tomato sauce and mozzarella cheese. Unlike its thin crust counterpart, the Neapolitan, New York-style pizzas can handle a wide range of additional toppings, from pepperoni and sausage to mushroom and anchovies. '
+	l=240
+class d:
+	d='    Pizza Margherita extra: Features tomatoes, mozzarella from Campania, basil, and extra virgin olive oil.'
+	l=190
+class e:
+	d='    A smoothie is a thick and creamy beverage made from pureed raw fruit, vegetables, and sometimes dairy products, typically using a blender'
+	l=600
+class f:
+	d='    Irish coffee is a bewitching combination of sweet, whisky-laced coffee through softly-whipped cream. Very simple, very indulgent, very delicious.'
+	l=500
+class g:
+	d='    Honey Glazed Carrots Even the pickiest of eaters will love these carrots.'
+	l=140
+class h:
+	d='    PAN-ROASTED FINGERLING POTATOES WITH PANCETTA :Fabio Trabocchi sears golden, buttery fingerling potatoes and tosses them with fresh dill.'
+	l=90
+class i:
+	d= '    Tortilla española exists in almost every corner of Spain: as a tapa in fancy city restaurants; as a filling for bocadillos (sandwiches) at gas-station cafés; as a main course served on worn metal plates in home kitchens.'
+	l=170
+class j:
+	d='    The lemon, Citrus limon (L.) Osbeck, is a species of small evergreen tree in the flowering plant family'
+	l=70
+class k:
+	d='     Cranberry juice is the juice of the cranberry. The term "cranberry juice cocktail" refers to products that contain about 28% cranberry juice and the remainder either other fruit juices '
+	l=90
+class l:
+	d='      Apple juice is a fruit juice made by the maceration and pressing of an apple. '
+	l=100
+print(" Welcome to pizzahut\n If you want to take dinner here only then prace 1 and if you want to take parcel then press 2")
+y=int(input())
+z='y'
+print("Menu")
+print("a.Pizza Marinara \n",a.d,a.l,"\nb.Chicago pizza\n",b.d,b.l,"\nc.New york style pizza\n",c.d,c.l,"\nd.Pizza Margherita\n",d.d,d.l,"\ne.smoothie \n",e.d,e.l,"f.Irish coffee \ng.Honey Glazed Carrots\n",f.d,f.l,"\nh.PAN-ROASTED FINGERLING POTATOES WITH PANCETTA\n",h.d,h.l,"\ni.Tortilla española\n",i.d,i.l,"\nj.The lemon, Citrus limon\n",j.d,j.l,"\nk.Cranberry juice\n",k.d,k.l,"\nl.Apple juice\n",l.d,l.l)
+print(" If you want to order anything plese enter the a,b,c,d.... accroding to yoir choice and please do not enter name of dish enter their index.\n Please order every thing one by one")
+u=0
+while(z=='y'):
+	print("What you want to take as a dinner?")
+	x=input()
+	if(x=='a'):
+		u=u+150
+	if(x=='b'):
+		u=u+250
+	if(x=='c'):
+		u=u+240
+	if(x=='d'):
+		u=u+190
+	if(x=='e'):
+		u=u+600
+	if(x=='f'):
+		u=u+500
+	if(x=='g'):
+		u=u+140
+	if(x=='h'):
+		u=u+90
+	if(x=='i'):
+		u=u+170
+	if(x=='j'):
+		u=u+70
+	if(x=='k'):
+		u=u+90
+	if(x=='l'):
+		u=u+100
+	print("Do you want to take any thing else?\n Please reply in y or n")
+	z=input()
+	if(z=="n"):
+		print("Your finle bill is",u)
+print("Thanks for coming here")
+3.
+def gcd(a,b):
+	r=a%b
+	if(r==0):
+		return b
+	else:
+		return gcd(b,r)
+print("Enter two numbers")
+a=int(input())
+b=int(input())
+c=gcd(a,b)
+print("gcd of given numbers is ",c)
+5.
+for i in range(0,5):
+	for j in range(0,5-i):
+		print(' ', end=' ')
+	for k in range(0,2*i+1):
+		print('*',end=' ')
+	print('\n')
+4.
+In the program first time you didn't pass any array so it will take l as array and so elements will be added in l
+Second time you passed array so elements will be added on that array
+Third time again it will use old l as a array and add elements in that array
