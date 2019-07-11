@@ -1,0 +1,17 @@
+sharuf baig@LAPTOP-KS716HRP MINGW64 ~
+$ mkdir ISTE
+
+sharuf baig@LAPTOP-KS716HRP MINGW64 ~
+$ cd ISTE
+
+sharuf baig@LAPTOP-KS716HRP MINGW64 ~/ISTE
+$ Python -m virtualenv -p python env
+Running virtualenv with interpreter C:\Program Files (x86)\Python37-32\python.exe
+Using base prefix 'C:\\Program Files (x86)\\Python37-32'
+New python executable in C:\Users\SHARUF~1\ISTE\env\Scripts\python.exe
+Installing setuptools, pip, wheel...
+done.
+
+sharuf baig@LAPTOP-KS716HRP MINGW64 ~/ISTE
+$ Python -m virtualenv --version
+16.6.0
