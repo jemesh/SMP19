@@ -1,0 +1,102 @@
+ASSIGNMENT 2 PYTHON (ISTE)
+-SHRUTI MASAND, 181EC245
+
+1. Create a virtual environment to install two different versions of the
+same package. If possible try to implement these packages in different
+programs to show that their versions are different otherwise share a
+screenshot showing the same inside the terminal itself.
+
+A1)
+virtualenv shruti
+pip install numpy==1.0
+pip install numpy==2.0
+
+(I HAVE DOUBT IN THIS QUESTION)
+
+
+
+2. Create a billing system using OOPs concepts for Pizza hut. Add
+options to either Dine In or Take Delivery. Add options for at least one
+offer on buying two items together getting another item free. The items
+on the menu should include at least 3 pizzas, 2 sides, and 2
+beverages.
+
+A2)
+farmhouse=250
+>>> margharita=220
+>>> peperoni=300
+>>> french_fries=100
+>>> garlic_bread=150
+>>> mojito=120
+>>> coke=80
+>>> dine_in=10
+>>> take_away=5
+
+def bill1(order):
+...  price= sum(order)
+...  print(price)
+...
+
+"""place your order as a tuple"""
+'place your order as a tuple'
+
+>>> """example of an order"""
+'example of an order'
+order1=(peperoni,farmhouse,french_fries,coke,mojito,dine_in)
+
+>>> bill1(order1)
+860
+
+>>> """offer: on buying peperoni with french_fries, coke is free"""
+'offer: on buying peperoni with french_fries, coke is free'
+
+>>> if peperoni and french_fries and coke in order1:
+...  print(bill(order1)-80)
+>>> else:
+…  print("congrats for earning a free coke!!")
+
+
+3. Write a recursive functions to calculate gcd in python
+A3)
+def gcd(a, b):
+    if (0 == a % b):
+        return b
+    return gcd(b, a%b)
+
+
+4. Explain output of following program briefly:
+def gfg(x,l=[ ] ):
+for i in range(x):
+l.append(i*i)
+print(l)
+gfg(2)
+gfg(3,[3,2,1])
+gfg(3)
+
+A4)
+gfg(2)
+[0]
+[0, 1]
+
+ gfg(3,[3,2,1])
+[3, 2, 1, 0]
+[3, 2, 1, 0, 1]
+[3, 2, 1, 0, 1, 4]
+
+ gfg(3)
+[0, 1, 0]
+[0, 1, 0, 1]
+[0, 1, 0, 1, 4]
+
+5. Write a python script to make this pattern using for loops:
+*
+***
+*****
+*******
+*********
+A5) 
+for i in range(0, 5):
+    for j in range(0, i+1):
+        print("* ",end="")
+    print()
+
