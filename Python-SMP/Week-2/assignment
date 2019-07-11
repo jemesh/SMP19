@@ -1,0 +1,164 @@
+Q1
+The package numpy added numpy.gcd function in version 1.15.0
+hence we install versions 1.14 and 1.16 to show this
+screenshots are in this folder
+
+--------------------------------------------------------------------------------
+Q2
+
+
+
+class item:
+    def __init__(self,name,price,size=2):
+        self.name=name
+        self.price=price
+
+        self.size=size
+    def tell(self):
+        print(self.name,end='   ')
+        if self.size==1:
+            print( self.price,"Small",sep='    ')
+        elif self.size==3:
+            print(self.price*2,"Large",sep='    ')
+        else :
+            print(self.price*1.5,"Medium",sep='    ')
+men1=[item("Margarita",20,1),item("Margarita",20,2),item("Margarita",20,3)]
+men2=[item("Veggie",25,1),item("Veggie",25,2),item("Veggie",25,3)]
+men3=[item("Chicken",30,1),item("Chicken",30,2),item("Chicken",30,3)]
+men4=[item("Fries",2,1),item("Fries",2,2),item("Fries",2,3)]
+men5=[item("Rings",3,1),item("Rings",3,2),item("Rings",3,3)]
+men6=[item("Cola",3,1),item("Cola",3,2),item("Cola",3,3)]
+men7=[item("Fanta",3,1),item("Fanta",3,2),item("Fanta",3,3)]
+menmen=[men1,men2,men3,men4,men5,men6,men7]
+
+menu=[item("Margarita",20),item("Veggie",25),item("Chicken",30),item("Fries",2,2),item("Rings",3,3),item("Cola",3,3),item("Fanta",3,3)]
+
+class bill():
+    def __init__(self,selection,eat):
+        self.selection=selection
+        self.eat=eat
+
+    def tot(self):
+        total=0
+        for i in self.selection:
+            if i.size==1:
+                total+=i.price
+            elif i.size==3:
+                total+=i.price*2
+            else:
+                total+=i.price*1.5
+        return total
+    def offer(self):
+        x = sum((p.size == 1 and (p.name=='Margarita' or p.name=='Veggie' or p.name=='Chicken')) for p in self.selection )
+        y = sum((p.size == 2  and (p.name=='Margarita' or p.name=='Veggie' or p.name=='Chicken')) for p in self.selection)
+        z = sum((p.size == 3 and (p.name=='Margarita' or p.name=='Veggie' or p.name=='Chicken')) for p in self.selection)
+        while(x>1):
+            self.selection.append(menu[3])
+            x-=2
+        while(y>1):
+            self.selection.append(menu[4])
+            y-=2
+        while(z>1):
+            self.selection.append(menu[5])
+            self.selection.append(menu[6])
+            z-=2
+        return self.selection
+
+
+
+print("WELCOME TO ISTE PIZZA HUB!!")
+print("HERE IS THE MENU:")
+print("ITEM     Small(1)   Medium(2)   Large(3)")
+i=1
+for item in menu:  # type: item
+    print(i,')',sep='',end='')
+    print(item.name,item.price,item.price*1.5,item.price*2,sep="    ")
+    i+=1
+print("\nALL ITEMS COME IN SIZES SMALL/MEDIUM/LARGE")
+print("\nOFFERS AVAILABLE ARE:")
+print("**BUY TWO SMALL PIZZAS GET ONE MEDIUM FRIES FREE!!**\n**BUY TWO MEDIUM PIZZAS GET ONE LARGE RINGS FREE!!**\n**BUY TWO LARGE PIZZAS GET ONE LARGE COLA AND ONE LARGE FANTA FREE!!**")
+print("\nENTER YOUR ORDER IN THE FORMAT <item no. as in menu><size(1=small,2=medium,3=large)> AND PRESS ENTER WHEN FINISHED")
+print("Example order:\n11 23 33 42 42\nThe above order is 1 small margarita,1 large veggie,1 large chicken,2 medium fries and a free large cola and fanta as mentioned in offer \nplease note: offer items are added separately and should be mentioned while ordering\n")
+print("ENTER ORDER:\n")
+order3=[]
+order2=[]
+order1=input().split()
+for x in order1:
+    y=int(x)
+    order2.append(y)
+try :
+    for x in order2:
+        order3.append(menmen[(x//10)-1][(x%10)-1])
+except:
+    print("ITEM UNAVAILABLE PLEASE RESTART PROGRAM AND TRY AGAIN")
+    exit(0)
+
+print("ORDER SUCCESSFULLY ACCEPTED AS:",order2)
+
+
+for x in order3:
+    x.tell()
+
+
+print("PLEASE ENTER D FOR DINE IN AND T FOR TAKEAWAY(DEFAULT VALUE IS TAKEAWAY)")
+a=input()
+bill1=bill(order3,a)
+amount=bill1.tot()
+final=bill1.offer()
+print("THE FINAL ORDER IS:\n\nITEM    PRICE   SIZE")
+for item in final:
+    item.tell()
+print("Amount Payable is:",amount)
+if a=='D':
+    print("YOU HAVE CHOSEN TO DINE-IN")
+else:
+    print("YOU HAVE CHOSEN TAKEAWAY")
+
+
+--------------------------------------------------------------------------------
+Q3
+
+
+def gcd(a,b,c):  #Function Definition
+
+    if a%c==0 and b%c==0:
+        return int(c)
+    else:
+        return gcd(a,b,c-1)  #recursive call
+
+
+
+x,y=(input("Enter Two space separated Numbers:\n").split())
+x,y=[int(x),int(y)]  #typecasting of input  
+z=gcd(x,y,min(x,y))
+
+
+
+print("The Gcd of",x,"and",y,"is",z)
+
+--------------------------------------------------------------------------------
+Q4
+
+output is :
+[0,1]
+[3,2,1,0,1,4]
+[0,1,0,1,4]
+
+
+Reason:
+l=[] assigns default value only once at the time of function definition
+subsequent function calls will have modified value of l(in case its value is not specified)
+--------------------------------------------------------------------------------
+Q5
+
+n=int(input("Enter Size Of Pattern\n"))  #Ask Size of pattern to user
+for i in range (n):
+    for j in range (i,n-1):   #prints preliminary spaces
+        print(" ",end="")
+    for j in range (2*i+1):   #prints *
+        print("*",end="") 
+    for j in range (i,n-1):   #prints trailing spaces
+        print(" ",end="")
+    print("")    #last newline character
+
+

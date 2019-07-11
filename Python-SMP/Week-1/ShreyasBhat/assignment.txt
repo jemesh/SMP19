@@ -1,0 +1,70 @@
+Q1
+--------------------------------------------------------------------------------
+output1
+['1' ,'S' ,'T','E']
+<same as above>
+
+reason:
+list2=list1------>This statement makes list2 point to list1 as all passes in python are pass by refernce
+hence change in list2 causes change in list1 and vice versa
+list1=list1+[]------->This statement causes a new pointer for list1 and hence new changes in list2 are not reflected in list1
+
+
+output2
+<same as before>
+['1','2','T','E']
+reason
+list1+=[]----------->Does not change pointer and hence changess in list2 still reflect
+---------------------------------------------------------------------------------
+
+Q2
+SORTING
+list1=[3.14,-28,9.26,34,26,1,0,2]
+print(list1)
+for j in range(0,len(list1)):
+    for i in range(0,len(list1)-1):
+        if list1[i]>list1[i+1]:
+            a=list1[i]
+            list1[i]=list1[i+1]
+            list1[i+1]=a
+
+
+print(list1)
+
+SEARCHING
+list1=[1,2,3,4,5,6]
+a=5
+b=10
+c=0
+d=0
+for i in range(0,len(list1)):
+    if(a==list1[i]):
+        c=1
+    if(b==list1[i]):
+        d=1
+if c:
+    print("Found",a,"in list")
+else:
+    print(a,"Not Found")
+if d:
+    print("Found",b,"In list")
+else:
+    print(b,"Not Found")
+--------------------------------------------------------------------------------Q3
+output
+False
+True
+
+reason
+id gives address of variable
+since l1 and l2 are diff variables;they have diff ids and hence output is false
+str1 and str2 are same var hence have same ids and hence output is true
+--------------------------------------------------------------------------------
+Q4
+assume given list is L
+
+new_list=[x for x in L if (x*x*x)%3==1]
+--------------------------------------------------------------------------------
+
+
+
