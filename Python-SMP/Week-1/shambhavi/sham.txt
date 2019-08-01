@@ -1,0 +1,41 @@
+3) false
+true
+
+
+
+1) [‘1’,’S’,’T’,’E’] # both the print statements give the same output; no change if line 5 changes
+     since both variables are pointing to the same object,change in reference (list2[0]) is reflected in list 1; whereas in second case, change in variable (list2[1]) does not reflect as it is not pointing to reference.
+
+
+2) def bubbleSort(arr):
+  n = len(arr)
+  for i in range(n):
+
+      for j in range(0, n-i-1):
+
+            if arr[j] > arr[j+1] :
+                   arr[j], arr[j+1] = arr[j+1], arr[j]
+
+arr = [64, 34, 25, 12, 22, 11, 90]
+
+bubbleSort(arr)
+
+print ("Sorted array is:")
+for i in range(len(arr)):
+     print (arr[i])
+      
+
+
+def search_binary(xs,target):
+    count = 0
+    for i in xs:
+        if i == target:
+            return count
+            count = count +1
+        else:
+            count = count +1
+            continue
+    return -1
+4) for i in range(len(l)): if l[i]%3==0: return(l[i]) else: None
+   /* if 1000%3 is 1 then 10%3 is also 1*/
+
